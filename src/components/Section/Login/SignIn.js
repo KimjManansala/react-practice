@@ -16,7 +16,7 @@ class Signin extends React.Component{
         if(!this.state.passowrd) this.setState({error: 'No password'})
         
         if(this.state.passowrd && this.state.username){
-            console.log('HI')
+
         this.props.submit('success')
         }
 

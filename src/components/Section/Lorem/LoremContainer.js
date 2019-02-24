@@ -7,7 +7,7 @@ import Para from './Para';
 class LoremContainer extends React.Component{
     constructor(props){
         super(props)
-        this.state = {num: 0, par: []}
+        this.state = {num: 1, par: ['']}
     }
 
     addPar(e){
