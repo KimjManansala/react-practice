@@ -47,7 +47,9 @@ class FunPeopeContainer extends Component {
     this.setState({ funPeople: arr });
   }
 
-  componentDidUpdate(prevProps, prevState) {}
+  componentDidUpdate(prevProps, prevState) {
+      
+  }
 
   render() {
     return (
@@ -67,10 +69,10 @@ class FunPeopeContainer extends Component {
             className="columns"
             style={{ display: "flex", flexWrap: "wrap" }}
           >
-            <FunPeepContainer
+           {this.state.funPeople.length?<FunPeepContainer
               people={this.state.funPeople}
               method={this.handleRemove}
-            />
+            />: <p>No Fun people :(</p> } 
           </div>
         </section>
       </React.Fragment>
@@ -79,32 +81,3 @@ class FunPeopeContainer extends Component {
 }
 
 export default FunPeopeContainer;
-
-{
-  /* <section className="content">
-    <h1 className="title">List of Fun People</h1>
-        <div className="box">
-           
-        </div>
-    <div className="columns">
-        <div className="column is-4">
-            <div className="box content is-medium">
-                <p>Bill is fun because he likes to party.</p>
-                <button className="button is-link">Remove Bill</button>
-            </div>
-        </div>
-    <div className="column is-4">
-        <div className="box content is-medium">
-            <p>Billy is fun because he parties harder than Bill.</p>
-            <button className="button is-link">Remove Billy</button>
-        </div>
-    </div>
-    <div className="column is-4">
-        <div className="box content is-medium">
-            <p>William is fun because he doesn't party at all.</p>
-            <button className="button is-link">Remove William</button>
-        </div>
-    </div>
-</div>
-</section> */
-}
